@@ -34,7 +34,7 @@ public class PublisherController {
 	private final static Logger log = Logger.getLogger(PublisherController.class);
 
 	@Autowired
-	private PublisherRepository publisherRepository;
+	private PublisherRepo publisherRepository;
 
 	@Autowired
 	private JournalService journalService;

@@ -23,18 +23,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.mib.io.journals.model.Category;
 import com.mib.io.journals.model.Subscription;
 import com.mib.io.journals.model.User;
-import com.mib.io.journals.repository.JournalRepository;
-import com.mib.io.journals.repository.UserRepository;
+import com.mib.io.journals.repository.JournalRepo;
+import com.mib.io.journals.repository.UserRepo;
 import com.mib.io.journals.service.CurrentUser;
 
 @Controller
 public class JournalController {
 
 	@Autowired
-	private JournalRepository journalRepository;
+	private JournalRepo journalRepository;
 
 	@Autowired
-	private UserRepository userRepository;
+	private UserRepo userRepository;
 
 	@ResponseBody
 	@RequestMapping(value = "/view/{id}", method = RequestMethod.GET, produces = "application/pdf")
