@@ -21,8 +21,8 @@ import com.mib.io.journals.model.Category;
 import com.mib.io.journals.model.Publisher;
 import com.mib.io.journals.model.Subscription;
 import com.mib.io.journals.model.User;
-import com.mib.io.journals.repository.CategoryRepository;
-import com.mib.io.journals.repository.PublisherRepository;
+import com.mib.io.journals.repository.CategoryRepo;
+import com.mib.io.journals.repository.PublisherRepo;
 import com.mib.io.journals.service.CurrentUser;
 import com.mib.io.journals.service.UserService;
 
@@ -31,7 +31,7 @@ import com.mib.io.journals.service.UserService;
 public class JournalRestService {
 
 	@Autowired
-	private PublisherRepository publisherRepository;
+	private PublisherRepo publisherRepository;
 
 	@Autowired
 	private JournalService journalService;
@@ -40,7 +40,7 @@ public class JournalRestService {
 	private UserService userService;
 
 	@Autowired
-	private CategoryRepository categoryRepository;
+	private CategoryRepo categoryRepository;
 
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public ResponseEntity<Object> browse(@AuthenticationPrincipal Principal principal) {

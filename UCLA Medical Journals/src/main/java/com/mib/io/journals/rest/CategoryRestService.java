@@ -1,7 +1,7 @@
 package com.mib.io.journals.rest;
 
 import com.mib.io.journals.model.Category;
-import com.mib.io.journals.repository.CategoryRepository;
+import com.mib.io.journals.repository.CategoryRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +13,7 @@ import java.util.List;
 public class CategoryRestService {
 
     @Autowired
-    private CategoryRepository repository;
+    private CategoryRepo repository;
 
 
     @RequestMapping(value = "")
