@@ -1,4 +1,11 @@
 CREATE SCHEMA `journals` DEFAULT CHARACTER SET utf8 ;
+
+drop table user;
+drop table category;
+drop table journal;
+drop table publisher;
+drop table subscription;
+
 CREATE TABLE user
 (
     id BIGINT(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
