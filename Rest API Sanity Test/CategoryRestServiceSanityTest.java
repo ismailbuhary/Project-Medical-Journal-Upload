@@ -42,15 +42,17 @@ public class CategoryRestServiceSanityTest {
 		mockMvc.perform(get("/public/rest/category")).andExpect(status().isOk())
 				.andExpect(content().contentType(contentType))
 				.andExpect(jsonPath("$[0].id", is(1)))
-				.andExpect(jsonPath("$[0].name", is("surgery")))
+				.andExpect(jsonPath("$[0].name", is("immunology")))
 				.andExpect(jsonPath("$[1].id", is(2)))
-				.andExpect(jsonPath("$[1].name", is("ophthalmology")))
+				.andExpect(jsonPath("$[1].name", is("pathology")))
 				.andExpect(jsonPath("$[2].id", is(3)))
-				.andExpect(jsonPath("$[2].name", is("therapy")))
+				.andExpect(jsonPath("$[2].name", is("endocrinology")))
 				.andExpect(jsonPath("$[3].id", is(4)))
-				.andExpect(jsonPath("$[3].name", is("stomatology")))
+				.andExpect(jsonPath("$[3].name", is("microbiology")))
 				.andExpect(jsonPath("$[4].id", is(5)))
-				.andExpect(jsonPath("$[4].name", is("cardiology")));
+				.andExpect(jsonPath("$[4].name", is("neurology")))
+				.andExpect(jsonPath("$[5].id", is(6)))
+				.andExpect(jsonPath("$[5].name", is("radiology")));
 	}
 }
 
