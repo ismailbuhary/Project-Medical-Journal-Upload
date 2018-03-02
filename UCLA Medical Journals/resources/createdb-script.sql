@@ -1,4 +1,11 @@
 CREATE SCHEMA `journals` DEFAULT CHARACTER SET utf8 ;
+
+drop table user;
+drop table category;
+drop table journal;
+drop table publisher;
+drop table subscription;
+
 CREATE TABLE user
 (
     id BIGINT(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -7,21 +14,27 @@ CREATE TABLE user
     pwd VARCHAR(255) NOT NULL,
     role VARCHAR(255) NOT NULL
 );
-CREATE TABLE item
+
+CREATE TABLE category
 (
     id BIGINT(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL
 );
+
 CREATE TABLE journal
 (
     id BIGINT(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    category_id BIGINT(20),
     name VARCHAR(255) NOT NULL,
     publish_date DATETIME NOT NULL,
     uuid VARCHAR(255),
     publisher_id BIGINT(20) NOT NULL,
+     CONSTRAINT FK_c7picib39dl7kxro2349cnpj9 FOREIGN KEY (category_id) REFERENCES category(id),
     CONSTRAINT FK_c7picib39dl7kxro2349cnpn9 FOREIGN KEY (publisher_id) REFERENCES publisher (id)
 );
+
 CREATE INDEX FK_c7picib39dl7kxro2349cnpn9 ON journal (publisher_id);
+
 CREATE TABLE publisher
 (
     id BIGINT(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -29,11 +42,17 @@ CREATE TABLE publisher
     user_id BIGINT(20) NOT NULL,
     CONSTRAINT FK_ml1xc0aovqkkm2p1lssgjkfas FOREIGN KEY (user_id) REFERENCES user (id)
 );
+
 CREATE UNIQUE INDEX UK_ml1xc0aovqkkm2p1lssgjkfas ON publisher (user_id);
+
 CREATE TABLE subscription
 (
     id BIGINT(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    user_id BIGINT(20) NOT NULL,
+    category_id BIGINT(20) NOT NULL,
     date DATETIME NOT NULL,
-    user_id BIGINT(20) NOT NULL
+     CONSTRAINT FK_c7picib39dl7kxro2349cnpk7 FOREIGN KEY (category_id) REFERENCES category(id)
+    
 );
+
 CREATE UNIQUE INDEX UK_tq3cq3gmsss8jjyb2l5sb1o6k ON subscription (user_id);
