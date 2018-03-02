@@ -56,11 +56,11 @@ table {
     margin-right: auto;
     margin-left: auto;
     border: 12px solid transparent;
-    border-bottom-color: #5B8C9B;
+    border-bottom-color: #9b2718;
 }
 
 .login-header {
-    background: #5B8C9B;
+    background: #9b3a3c;
     padding: 20px;
     font-size: 1.4em;
     font-weight: normal;
@@ -70,7 +70,7 @@ table {
 }
 
 .login-container {
-    background: #ebebeb;
+    background: #ebd7ce;
     padding: 12px;
 }
 
@@ -103,14 +103,14 @@ table {
 }
 
 .login input[type="submit"] {
-    background: #5B8C9B;
+    background: #9b485b;
     border-color: transparent;
     color: #fff;
     cursor: pointer;
 }
 
 .login input[type="submit"]:hover {
-    background: #5B8C9B;
+    background: #9b2e43;
 }
 
 .login input[type="submit"]:focus {
