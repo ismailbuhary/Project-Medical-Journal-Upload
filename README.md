@@ -20,4 +20,4 @@ mySQL 7 or higher database installed on local.
 mySQL database settings to be modified in application.properties file.
 
 
-Software has being Tested and is production ready.
+Software has being Tested and is production ready now.
