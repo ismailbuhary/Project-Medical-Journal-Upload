@@ -17,6 +17,7 @@ Prerequisites :
 
 Java 1.8 or higher. JRE
 mySQL 7 or higher database installed on local.
+Add mySQL schema Journals .
 mySQL database settings to be modified in application.properties file.
 
 
