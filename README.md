@@ -1,5 +1,9 @@
-# Proj_Medical_Journal_Upload
+# Description
+
+
 Medical Journal Upload Project
+Enables publishers to upload PDF files to the server and diffent work groups to subscribe or download and view them.
+
 
 Release Notes: 
 Initial Product Release :0.5V
