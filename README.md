@@ -23,6 +23,6 @@ Java 1.8 or higher. JRE
 mySQL 7 or higher database installed on local.
 Add mySQL schema Journals .
 mySQL database settings to be modified in application.properties file.
-
+Tomcat 8 or higher.
 
 Software has being Tested and is production ready now.
