@@ -24,6 +24,6 @@ mySQL 7 or higher database installed on local.
 Add mySQL schema Journals .
 mySQL database settings to be modified in application.properties file.
 Tomcat 8 or higher.
-maven build tool
+Maven build tool
 
 Software has being Tested and is production ready now.
